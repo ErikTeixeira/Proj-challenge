@@ -3,44 +3,114 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
+    backgroundColor: '#f5f5f5',
+    padding: 16,
   },
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'flex-start', // Alinha o botão de voltar à esquerda
-    padding: 20,
-    marginBottom: 20, 
+    marginBottom: 16,
   },
   arrow: {
-    marginRight: 40
+    marginRight: 16,
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 20,
+    color: '#333',
+    textAlign: 'center',
+    borderBottomWidth: 2,
+    borderBottomColor: '#eca406',
+    paddingBottom: 8,
   },
-  itineraryContent: {
-    flex: 1, // O conteúdo do itinerário ocupa o espaço disponível
-  },
-  deleteButton: {
-    padding: 10, 
+  emptyText: {
+    fontSize: 18,
+    color: '#666',
+    textAlign: 'center',
+    marginTop: 50,
   },
   itineraryItem: {
-    padding: 20,
+    backgroundColor: '#fff',
+    borderRadius: 8,
     borderWidth: 1,
-    borderColor: '#ddd',
-    borderRadius: 5,
-    marginBottom: 15,
-    backgroundColor: '#fff', 
-    flexDirection: 'row', // Adicione esta linha
-    alignItems: 'center'  // Alinhe os itens verticalmente ao centro
+    borderColor: '#eca406',
+    padding: 16,
+    marginBottom: 16,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  itineraryContent: {
+    flex: 1,
   },
   itineraryTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    marginBottom: 10,
+    color: '#333',
+  },
+  deleteButton: {
+    backgroundColor: '#FFFFFFFF', // Fundo laranja para o botão de excluir
+    padding: 8,
+    borderRadius: 4,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginLeft: 16,
+  },
+  deleteButtonText: {
+    color: '#fff', // Texto branco para o botão de excluir
+    fontSize: 16,
+  },
+  formContainer: {
+    backgroundColor: '#fff',
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: '#eca406',
+    padding: 16,
+    marginBottom: 16,
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: '#ddd',
+    borderRadius: 4,
+    padding: 8,
+    marginBottom: 8,
+    fontSize: 16,
+  },
+  detailsContainer: {
+    flex: 1,
+    backgroundColor: '#fff',
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: '#eca406',
+    padding: 16,
+    margin: 16,
+  },
+  detailsTitle: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#333',
+    borderBottomWidth: 2,
+    borderBottomColor: '#eca406',
+    paddingBottom: 8,
+    marginBottom: 16,
+  },
+  detailsText: {
+    fontSize: 18,
+    color: '#666',
+  },
+  button: {
+    backgroundColor: '#FFFFFFFF',
+    padding: 16,
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginVertical: 8,
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
   },
 });
-  
+
 export default styles;
