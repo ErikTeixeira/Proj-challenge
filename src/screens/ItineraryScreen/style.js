@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: '600',
     marginBottom: 10,
-    color: '#1a73e8', // Azul mais vibrante para destacar os dias
+    color: '#eca406', // Azul mais vibrante para destacar os dias
     flexDirection: 'row',
     alignItems: 'center', // Alinhando ícones e textos nos títulos dos dias
   },
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   button: {
-    backgroundColor: '#1a73e8',
+    backgroundColor: '#eca406',
     paddingVertical: 12,
     paddingHorizontal: 25,
     borderRadius: 50, // Bordas arredondadas para suavidade

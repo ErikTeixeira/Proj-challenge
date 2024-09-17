@@ -1,12 +1,12 @@
 import React from 'react';
-import { View, Text, Image, Pressable } from 'react-native';
+import { Image, Pressable, ScrollView, Text } from 'react-native';
 import styles from "./style";
 
 const PlaceDetails = ({ route, navigation }) => {
   const { place } = route.params;
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Image source={place.image} style={styles.image} />
 
 
@@ -26,7 +26,7 @@ const PlaceDetails = ({ route, navigation }) => {
         {place.description ? place.description : `Descrição detalhada sobre ${place.name}...`}
       </Text>
 
-    </View>
+    </ScrollView>
   );
 };
 

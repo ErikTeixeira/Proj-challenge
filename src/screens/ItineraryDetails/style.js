@@ -4,52 +4,77 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#f5f5f5', // Cor de fundo suave
+    backgroundColor: '#eef1f5', // Fundo suave, moderno
   },
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 20, 
+    marginBottom: 20,
   },
   arrow: {
     marginRight: 20,
+    padding: 5, // Adiciona um pouco de espaço ao redor do ícone para torná-lo mais fácil de tocar
+    backgroundColor: '#fff', // Fundo branco para o ícone
+    borderRadius: 50, // Ícone redondo
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
   },
   title: {
-    fontSize: 24,
+    fontSize: 26, // Título maior para dar mais presença
     fontWeight: 'bold',
-    color: '#333', // Cor de texto escura
+    color: '#333', // Cor escura
   },
   dayContainer: {
-    marginBottom: 20,
-    padding: 15,
-    borderWidth: 1,
-    borderColor: '#ddd',
-    borderRadius: 5,
-    backgroundColor: '#fff', // Cor de fundo branca para os dias
+    marginBottom: 25,
+    padding: 20,
+    borderRadius: 12, // Bordas suaves para os cards dos dias
+    backgroundColor: '#fff',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.1,
+    shadowRadius: 8,
+    elevation: 5,
   },
   dayTitle: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginBottom: 10,
-    color: '#007bff', // Cor azul para os dias
+    fontSize: 22,
+    fontWeight: '600',
+    color: '#eca406', // Azul moderno para o título dos dias
+    marginBottom: 15,
   },
   periodTitle: {
     fontSize: 18,
-    fontWeight: 'bold',
-    marginTop: 15,
-    marginBottom: 5,
-    color: '#666', // Cor cinza para os títulos de período
+    fontWeight: '500',
+    marginTop: 10,
+    marginBottom: 8,
+    color: '#666', // Cinza suave
+    flexDirection: 'row',
+    alignItems: 'center', // Alinhando com ícones
+  },
+  periodIcon: {
+    marginRight: 8, // Espaço para ícones (se adicionados)
   },
   activityContainer: {
     marginBottom: 10,
+    padding: 15,
+    borderRadius: 8,
+    backgroundColor: '#f9f9f9', // Fundo leve para as atividades
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.08,
+    shadowRadius: 6,
+    elevation: 3,
   },
   activityDescription: {
     fontSize: 16,
+    fontWeight: '500',
     color: '#333',
   },
   activityDetails: {
     fontSize: 14,
-    color: '#555', // Cor cinza mais clara para detalhes
+    color: '#555', // Detalhes em cinza claro
     marginTop: 5,
   },
 });

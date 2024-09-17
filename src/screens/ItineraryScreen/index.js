@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, ActivityIndicator, ScrollView, Pressable } from 'react-native';
 import * as GoogleGenerativeAI from '@google/generative-ai';
+import React, { useEffect, useState } from 'react';
+import { ActivityIndicator, Pressable, ScrollView, Text, View } from 'react-native';
 
 import { useItineraries } from '../../components/ItineraryContext';
 
@@ -8,12 +8,12 @@ import styles from "./style";
 
 // IMport das reviews JSON
 
-import parquesData from '../../../assets/reviews/Parque-Zoo-Aquario-Trilha-Jardim.json';
-import lugaresNoturnosData from '../../../assets/reviews/LugaresNoturnos-.json';
-import comprasData from '../../../assets/reviews/Compras-.json';
 import cafeBar from '../../../assets/reviews/Cafe-Restaurante-Bar-.json';
+import comprasData from '../../../assets/reviews/Compras-.json';
 import culinariaData from '../../../assets/reviews/CulinariaBrasileira-Italiana-Mexicana-Japonesa-.json';
+import lugaresNoturnosData from '../../../assets/reviews/LugaresNoturnos-.json';
 import museusData from '../../../assets/reviews/Museus-Teatros-.json';
+import parquesData from '../../../assets/reviews/Parque-Zoo-Aquario-Trilha-Jardim.json';
 
 
 const ItineraryScreen = ({ route, navigation }) => {
@@ -76,7 +76,7 @@ const ItineraryScreen = ({ route, navigation }) => {
           ],
         });
 
-        
+
 
         // Send the user's itinerary preferences as the next input
         const userMessage = `
@@ -123,7 +123,7 @@ const ItineraryScreen = ({ route, navigation }) => {
         ?.params?.handleSaveItinerary(route.params.newItinerary);
 
       // Navegue para 'Home' após salvar o itinerário
-      navigation.navigate('Home'); 
+      navigation.navigate('Home');
     }
   }, [route.params?.newItinerary]);
 
@@ -190,7 +190,7 @@ const ItineraryScreen = ({ route, navigation }) => {
     <View style={styles.container}>
       {isLoading ? (
         <View style={styles.loadingContainer}>
-          <ActivityIndicator size="large" color="#007bff" />
+          <ActivityIndicator size="large" color="#eca406" />
           <Text>Gerando seu itinerário...</Text>
         </View>
       ) : (
@@ -202,12 +202,12 @@ const ItineraryScreen = ({ route, navigation }) => {
             <Pressable style={styles.button} onPress={() => navigation.navigate('Formulario')}>
               <Text style={styles.buttonText}>Refazer</Text>
             </Pressable>
-            
-            <Pressable 
-              style={styles.button} 
+
+            <Pressable
+              style={styles.button}
               onPress={() => {
-                addItinerary(itinerary); 
-                navigation.navigate('Home'); 
+                addItinerary(itinerary);
+                navigation.navigate('Home');
               }}
             >
               <Text style={styles.buttonText}>Salvar Itinerário</Text>

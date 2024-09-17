@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   backButton: {
-    backgroundColor: '#908A8A',
+    backgroundColor: '#eca406',
     padding: 10,
     marginTop: 10, // Espaçamento para não colar no título
     marginBottom: 20, // Espaçamento para não colar na descrição
