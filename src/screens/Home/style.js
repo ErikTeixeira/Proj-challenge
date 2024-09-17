@@ -1,0 +1,99 @@
+import { StyleSheet } from "react-native";
+
+const styles = StyleSheet.create({
+  scrollContainer: {
+    flexGrow: 1,
+    backgroundColor: '#fff',
+  },
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    backgroundColor: '#fff',
+  },
+  icon: {
+    width: 40,
+    height: 40,
+  },
+  divText: {
+    width: '100%',
+    height: 200, 
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 15,
+    overflow: 'hidden',
+    marginVertical: 10,
+  },
+  overlay: {
+    backgroundColor: 'rgba(95, 95, 95, 0.6)',
+    padding: 5,
+    borderRadius: 10,
+  },
+  textOverlay: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '900',
+    textAlign: 'center',
+    textShadowColor: 'rgba(0, 0, 0, 0.85)',
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowRadius: 4,
+  },
+  containerButtons: {
+    flex: 1,
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    padding: 10,
+    backgroundColor: '#fff',
+  },
+  buttonRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '80%',
+    marginVertical: 20,
+  },
+  title: {
+    fontSize: 33,
+    fontWeight: '700',
+    color: '#000',
+  },
+  button: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 12,
+    marginVertical: 10,
+    borderRadius: 6,
+    width: '45%', // Ajuste para que os botões fiquem lado a lado
+  },
+  text: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#000',
+  },
+  recommendedSection: {
+    marginTop: 20,
+    paddingHorizontal: 10,
+  },
+  recommendedTitle: {
+    fontSize: 20,
+    fontWeight: '700',
+    marginBottom: 10,
+  },
+  recommendedItem: {
+    marginRight: 15,
+    alignItems: 'center',
+  },
+  recommendedImage: {
+    width: 120,
+    height: 80,
+    borderRadius: 8,
+    marginBottom: 5,
+  },
+  recommendedText: {
+    fontSize: 14,
+    fontWeight: '500',
+  },
+});
+
+export default styles;
