@@ -111,6 +111,18 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
   },
+  footer: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    padding: 15,
+    alignItems: 'center',
+  },
+  footerText: {
+    fontSize: 14,
+    color: '#666',
+  },
 });
 
 export default styles;

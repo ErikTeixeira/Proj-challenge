@@ -277,6 +277,11 @@ const HomeScreen = ({ navigation }) => {
           ))}
         </ScrollView>
       </View>
+      <View style={styles.footer}>
+        <Text style={styles.footerText}>
+          &#169; TechPeach Copyright 2024
+        </Text>
+      </View>
     </ScrollView>
   );
 }

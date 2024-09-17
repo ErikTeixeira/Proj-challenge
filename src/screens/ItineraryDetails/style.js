@@ -77,6 +77,14 @@ const styles = StyleSheet.create({
     color: '#555', // Detalhes em cinza claro
     marginTop: 5,
   },
+  footer: {
+    padding: 15,
+    alignItems: 'center',
+  },
+  footerText: {
+    fontSize: 14,
+    color: '#666',
+  },
 });
 
 export default styles;

@@ -35,6 +35,14 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
   },
+  footer: {
+    padding: 15,
+    alignItems: 'center',
+  },
+  footerText: {
+    fontSize: 14,
+    color: '#666',
+  },
 });
 
 export default styles;
