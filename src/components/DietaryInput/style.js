@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   optionButton: {
     padding: 10,
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: '#eca406',
     borderRadius: 5,
     marginVertical: 5,
     marginHorizontal: 5,
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   optionButtonSelected: {
-    backgroundColor: '#d3d3d3',
+    backgroundColor: '#eca406',
   },
   optionText: {
     fontSize: 16,
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   },
   input: {
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: '#eca406',
     borderRadius: 5,
     padding: 10,
     textAlign: 'center',

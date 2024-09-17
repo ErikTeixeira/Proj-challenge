@@ -23,12 +23,12 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     marginVertical: 5,
     marginHorizontal: 5,
-    backgroundColor: '#fff',
+    backgroundColor: '#ffbe31ff',
     width: '40%',
     alignItems: 'center',
   },
   optionButtonSelected: {
-    backgroundColor: '#d3d3d3',
+    backgroundColor: '#eca406',
   },
   optionText: {
     fontSize: 16,
