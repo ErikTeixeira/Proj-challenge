@@ -96,6 +96,14 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '500',
   },
+  footer: {
+    padding: 15,
+    alignItems: 'center',
+  },
+  footerText: {
+    fontSize: 14,
+    color: '#666',
+  },
 });
 
 export default styles;

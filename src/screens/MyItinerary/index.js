@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, FlatList, TouchableOpacity, Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import React, { useEffect } from 'react';
+import { FlatList, Text, TouchableOpacity, View } from 'react-native';
 
 import { useItineraries } from '../../components/ItineraryContext';
 
 import styles from "./style";
 
-const MyItinerary = ({ navigation }) => { 
+const MyItinerary = ({ navigation }) => {
   // Obtém os itinerários e a função deleteItinerary do contexto
   const { itineraries, deleteItinerary, updateCounter } = useItineraries();
 
@@ -29,21 +29,20 @@ const MyItinerary = ({ navigation }) => {
       </TouchableOpacity>
 
       <TouchableOpacity
-        onPress={() => { 
+        onPress={() => {
           const index = itineraries.findIndex(it => it.id === item.id);
           if (index > -1) {
             deleteItinerary(index);
           } else {
             console.error("Itinerário não encontrado para exclusão.");
           }
-        }} 
+        }}
         style={styles.deleteButton}
       >
         <Ionicons name="trash" size={24} color="red" />
       </TouchableOpacity>
     </View>
   );
-
 
   return (
     <View style={styles.container}>
@@ -63,6 +62,12 @@ const MyItinerary = ({ navigation }) => {
           keyExtractor={(item) => item.id.toString()}
         />
       )}
+
+      <View style={styles.footer}>
+        <Text style={styles.footerText}>
+          &#169; TechPeach Copyright 2024
+        </Text>
+      </View>
     </View>
   );
 };

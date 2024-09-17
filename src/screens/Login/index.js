@@ -9,12 +9,11 @@ import styles from "./style";
 // erik@gmail.com
 // gem123
 
-
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = React.useState('');
   const [pass, setPass] = React.useState('');
 
-  const [error, setErrror] = React.useState('');
+  const [error, setError] = React.useState('');
 
   const [continua, setContinua] = React.useState(false);
 
@@ -50,27 +49,22 @@ const LoginScreen = ({ navigation }) => {
       })
   }
 
-
   React.useEffect(() => {
     if (continua) {
       navigation.navigate('Home');
     }
   }, [continua, navigation]);
 
-
   return (
-
     <ImageBackground
       source={require('../../../assets/login.jpg')}
       style={styles.image}
       blurRadius={1}
     >
-
       <View style={styles.container}>
+        <Text style={styles.title}>TechPeach</Text>
 
-        <Text style={styles.title} >TechPeach</Text>
-
-        <Text style={styles.login} >Login</Text>
+        <Text style={styles.login}>Login</Text>
 
         <InputText
           style={styles.input}
@@ -79,7 +73,7 @@ const LoginScreen = ({ navigation }) => {
           placeholder='email'
         />
 
-        <Text style={styles.login} >Senha</Text>
+        <Text style={styles.login}>Senha</Text>
 
         <InputText
           style={styles.input}
@@ -93,7 +87,6 @@ const LoginScreen = ({ navigation }) => {
             styles.button,
             { backgroundColor: pressed ? '#D49203FF' : '#FFBE31FF' }
           ]}
-
           onPress={loginUser}
         >
           <Text style={styles.text}>Login</Text>
@@ -104,18 +97,13 @@ const LoginScreen = ({ navigation }) => {
             styles.button,
             { backgroundColor: pressed ? '#D49203FF' : '#FFBE31FF' }
           ]}
-
           onPress={createUser}
         >
           <Text style={styles.text}>Cadastrar</Text>
         </Pressable>
-
       </View>
-
     </ImageBackground>
   );
-
 }
-
 
 export default LoginScreen;

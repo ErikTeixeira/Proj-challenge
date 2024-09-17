@@ -7,14 +7,12 @@ import { useItineraries } from '../../components/ItineraryContext';
 import styles from "./style";
 
 // IMport das reviews JSON
-
 import cafeBar from '../../../assets/reviews/Cafe-Restaurante-Bar-.json';
 import comprasData from '../../../assets/reviews/Compras-.json';
 import culinariaData from '../../../assets/reviews/CulinariaBrasileira-Italiana-Mexicana-Japonesa-.json';
 import lugaresNoturnosData from '../../../assets/reviews/LugaresNoturnos-.json';
 import museusData from '../../../assets/reviews/Museus-Teatros-.json';
 import parquesData from '../../../assets/reviews/Parque-Zoo-Aquario-Trilha-Jardim.json';
-
 
 const ItineraryScreen = ({ route, navigation }) => {
   const { formData } = route.params;
@@ -76,8 +74,6 @@ const ItineraryScreen = ({ route, navigation }) => {
           ],
         });
 
-
-
         // Send the user's itinerary preferences as the next input
         const userMessage = `
           Crie um itinerário de viagem detalhado para cidade de São Paulo com base nas seguintes informações que o usuário informou:
@@ -126,7 +122,6 @@ const ItineraryScreen = ({ route, navigation }) => {
       navigation.navigate('Home');
     }
   }, [route.params?.newItinerary]);
-
 
   const formatItinerary = (itineraryText) => {
     if (!itineraryText) return null;
@@ -187,14 +182,14 @@ const ItineraryScreen = ({ route, navigation }) => {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={{ flex: 1 }}>
       {isLoading ? (
         <View style={styles.loadingContainer}>
           <ActivityIndicator size="large" color="#eca406" />
           <Text>Gerando seu itinerário...</Text>
         </View>
       ) : (
-        <ScrollView>
+        <ScrollView style={styles.scrollView}>
           <Text style={styles.title}>Seu Itinerário:</Text>
           {formatItinerary(itinerary)}
 
@@ -215,6 +210,12 @@ const ItineraryScreen = ({ route, navigation }) => {
           </View>
         </ScrollView>
       )}
+
+      <View style={styles.footer}>
+        <Text style={styles.footerText}>
+          &#169; TechPeach Copyright 2024
+        </Text>
+      </View>
     </View>
   );
 };

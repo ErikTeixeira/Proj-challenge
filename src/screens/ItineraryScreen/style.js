@@ -101,6 +101,17 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     fontSize: 16,
   },
+  scrollView: {
+    flex: 1,
+  },
+  footer: {
+    padding: 15,
+    alignItems: 'center',
+  },
+  footerText: {
+    fontSize: 14,
+    color: '#666',
+  },
 });
 
 export default styles;

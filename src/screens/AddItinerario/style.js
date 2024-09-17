@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start', // Alinha o botão de voltar à esquerda
     padding: 20,
-    marginBottom: 20, 
+    marginBottom: 20,
   },
   description: {
     marginBottom: 20,
@@ -35,6 +35,14 @@ const styles = StyleSheet.create({
     color: 'white',
     textAlign: 'center',
     fontWeight: 'bold',
+  },
+  footer: {
+    padding: 15,
+    alignItems: 'center',
+  },
+  footerText: {
+    fontSize: 14,
+    color: '#666',
   },
 });
 
