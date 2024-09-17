@@ -36,14 +36,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontWeight: 'bold',
   },
-  footer: {
-    padding: 15,
-    alignItems: 'center',
-  },
-  footerText: {
-    fontSize: 14,
-    color: '#666',
-  },
   formContainer: {
     backgroundColor: '#fff', // Fundo branco para o formulário
     borderRadius: 8,
@@ -101,7 +93,15 @@ const styles = StyleSheet.create({
   focusOptionText: {
     color: '#eca406', // Texto laranja para opções de foco
     fontSize: 16,
-  }
+  },
+  footer: {
+    padding: 15,
+    alignItems: 'center',
+  },
+  footerText: {
+    fontSize: 14,
+    color: '#666',
+  },
 });
 
 export default styles;
