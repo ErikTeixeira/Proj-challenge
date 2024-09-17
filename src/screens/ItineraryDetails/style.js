@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
   dayTitle: {
     fontSize: 22,
     fontWeight: '600',
-    color: '#1a73e8', // Azul moderno para o título dos dias
+    color: '#eca406', // Azul moderno para o título dos dias
     marginBottom: 15,
   },
   periodTitle: {

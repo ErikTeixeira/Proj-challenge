@@ -13,13 +13,24 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     backgroundColor: '#fff',
   },
-  icon: {
-    width: 40,
-    height: 40,
+  title: {
+    fontSize: 50,
+    fontWeight: '1000',
+    color: '#000',
+  },
+  logoutButton: {
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+    borderRadius: 6,
+  },
+  logoutText: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#fff',
   },
   divText: {
     width: '100%',
-    height: 200, 
+    height: 200,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 15,
@@ -52,11 +63,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     width: '80%',
     marginVertical: 20,
-  },
-  title: {
-    fontSize: 33,
-    fontWeight: '700',
-    color: '#000',
   },
   button: {
     alignItems: 'center',
