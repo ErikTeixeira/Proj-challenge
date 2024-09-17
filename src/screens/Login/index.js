@@ -1,6 +1,6 @@
+import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import React from 'react';
-import { Text, View, TextInput,ImageBackground , Pressable } from 'react-native';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { ImageBackground, Pressable, Text, View } from 'react-native';
 import { app } from '../../../firebaseConfig';
 import InputText from '../../components/InputText/index';
 
@@ -57,11 +57,11 @@ const LoginScreen = ({ navigation }) => {
     }
   }, [continua, navigation]);
 
-  
+
   return (
 
-    <ImageBackground 
-      source={require('../../../assets/background1.png')} 
+    <ImageBackground
+      source={require('../../../assets/login.jpg')}
       style={styles.image}
       blurRadius={1}
     >
@@ -73,25 +73,25 @@ const LoginScreen = ({ navigation }) => {
         <Text style={styles.login} >Login</Text>
 
         <InputText
-          style={styles.input} 
+          style={styles.input}
           value={email}
           onChangeText={setEmail}
           placeholder='email'
         />
 
         <Text style={styles.login} >Senha</Text>
-        
+
         <InputText
-          style={styles.input} 
+          style={styles.input}
           value={pass}
           onChangeText={setPass}
           placeholder='senha'
         />
 
-        <Pressable 
+        <Pressable
           style={({ pressed }) => [
             styles.button,
-            { backgroundColor: pressed ? '#908A8A' : '#ABABAB' }
+            { backgroundColor: pressed ? '#D49203FF' : '#FFBE31FF' }
           ]}
 
           onPress={loginUser}
@@ -99,10 +99,10 @@ const LoginScreen = ({ navigation }) => {
           <Text style={styles.text}>Login</Text>
         </Pressable>
 
-        <Pressable 
+        <Pressable
           style={({ pressed }) => [
             styles.button,
-            { backgroundColor: pressed ? '#908A8A' : '#ABABAB' }
+            { backgroundColor: pressed ? '#D49203FF' : '#FFBE31FF' }
           ]}
 
           onPress={createUser}
@@ -114,7 +114,7 @@ const LoginScreen = ({ navigation }) => {
 
     </ImageBackground>
   );
-  
+
 }
 
 

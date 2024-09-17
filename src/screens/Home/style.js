@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 50,
-    fontWeight: '1000',
+    fontWeight: '700',
     color: '#000',
   },
   logoutButton: {
@@ -37,16 +37,12 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     marginVertical: 10,
   },
-  overlay: {
-    backgroundColor: 'rgba(95, 95, 95, 0.6)',
-    padding: 5,
-    borderRadius: 10,
-  },
   textOverlay: {
     color: '#fff',
     fontSize: 16,
     fontWeight: '900',
     textAlign: 'center',
+    padding: 10,
     textShadowColor: 'rgba(0, 0, 0, 0.85)',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 4,
@@ -74,7 +70,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: '800',
     color: '#000',
   },
   recommendedSection: {

@@ -71,8 +71,127 @@ const HomeScreen = ({ navigation }) => {
       O Teatro Municipal passou por várias renovações e restaurações ao longo dos anos para garantir que continue a ser um dos principais centros culturais de São Paulo. Essas reformas visam preservar a integridade histórica do edifício enquanto modernizam suas instalações para o conforto dos visitantes.
     `,
     },
-    // Adicione mais lugares aqui com descrição
+    {
+      name: 'Parque Ibirapuera',
+      image: require('../../../assets/parque-ibirapuera.jpg'),
+      description: `
+    O Parque Ibirapuera é um dos mais importantes e icônicos parques urbanos do Brasil, conhecido por sua vasta área verde, suas atrações culturais e sua importância para o lazer e bem-estar da população. Localizado em São Paulo, o parque é um marco histórico e cultural da cidade.
+
+    Localização:
+    O Parque Ibirapuera está situado na Zona Sul de São Paulo, entre os bairros Ibirapuera e Vila Mariana. A sua localização central facilita o acesso a partir de diferentes áreas da cidade e é próximo de importantes centros culturais e instituições educacionais.
+
+    Arquitetura e Design:
+    O parque foi projetado por Oscar Niemeyer e Burle Marx, sendo um exemplo notável de paisagismo e arquitetura moderna. O espaço inclui belos lagos, amplas áreas de lazer, jardins e diversas estruturas arquitetônicas, como o Auditório Ibirapuera e o Pavilhão da Bienal. O projeto do parque é um exemplo do conceito de "cidade jardim", integrando natureza e urbanismo.
+
+    Atrações:
+    O Parque Ibirapuera oferece uma variedade de atrações e atividades, incluindo áreas para caminhadas, ciclismo, esportes, piqueniques e eventos culturais. O parque abriga importantes instituições culturais como o Museu de Arte Moderna (MAM) e o Museu Afro Brasil, além de um planetário e diversos centros de cultura e lazer.
+
+    Importância Cultural:
+    O Parque Ibirapuera é um importante centro de lazer e cultura em São Paulo, frequentemente listado entre os melhores parques urbanos do país. Sua importância vai além das atividades recreativas, servindo como um símbolo do patrimônio cultural e ambiental da cidade.
+
+    Visitação:
+    O parque está aberto ao público todos os dias e é um destino popular para atividades ao ar livre e eventos culturais. A entrada é gratuita e não é necessário fazer reservas para visitar o parque, embora algumas atrações internas possam exigir ingressos.
+
+    Renovação:
+    O Parque Ibirapuera passa por contínuas melhorias e renovações para manter suas instalações e garantir uma experiência agradável para os visitantes. Essas atualizações visam preservar a beleza natural do parque enquanto modernizam suas estruturas e serviços.
+  `,
+    },
+    {
+      name: 'Parque Villa-Lobos',
+      image: require('../../../assets/parque-villa-lobos.jpg'),
+      description: `
+    O Parque Villa-Lobos é um dos principais parques urbanos de São Paulo, conhecido por sua ampla área verde, instalações para atividades recreativas e sua importância para o lazer e a qualidade de vida na cidade. Localizado na Zona Oeste de São Paulo, o parque é um espaço essencial para os residentes e visitantes.
+
+    Localização:
+    O Parque Villa-Lobos está situado no bairro de Alto de Pinheiros, na Zona Oeste de São Paulo. Sua localização central oferece fácil acesso para moradores de diferentes áreas da cidade e está próximo de importantes vias de transporte.
+
+    Arquitetura e Design:
+    O parque foi projetado para proporcionar uma ampla variedade de espaços ao ar livre e áreas de lazer. Inclui grandes gramados, trilhas para caminhadas e corridas, ciclovias, e um complexo de esportes que oferece quadras para tênis, futebol e outras atividades. O design do parque visa oferecer um ambiente agradável e multifuncional para diferentes tipos de usuários.
+
+    Atrações:
+    O Parque Villa-Lobos é conhecido por suas instalações para atividades físicas e recreativas, incluindo pistas para ciclismo, áreas para piqueniques, playgrounds para crianças e espaços para eventos ao ar livre. Além disso, o parque frequentemente organiza eventos culturais e esportivos, atraindo um público diversificado.
+
+    Importância Cultural:
+    O Parque Villa-Lobos é um importante espaço verde em São Paulo, contribuindo significativamente para a qualidade de vida urbana. Sua ampla gama de facilidades e sua importância para atividades ao ar livre fazem dele um dos principais pontos de lazer na cidade.
+
+    Visitação:
+    O parque está aberto ao público todos os dias e oferece acesso gratuito. É um destino popular para atividades físicas, encontros sociais e eventos comunitários. Não é necessário fazer reservas para visitar o parque, mas algumas atividades e eventos podem exigir inscrições antecipadas.
+
+    Renovação:
+    O Parque Villa-Lobos passa por melhorias e manutenções regulares para manter suas instalações em boas condições e garantir a satisfação dos visitantes. Essas atualizações ajudam a preservar o espaço e a oferecer uma experiência de alta qualidade para todos que o utilizam.
+  `,
+    }
+
   ];
+
+  const couponPlaces = [
+    {
+      name: 'Mocotó - 5% OFF',
+      image: require('../../../assets/mocoto.png'),
+      description: `
+        O Mocotó é um renomado bar e restaurante de São Paulo, especializado em comida nordestina. Oferece um ambiente acolhedor e pratos autênticos.
+    
+        Como Funciona o Cupom:
+        - Ganhe cupons participando de promoções ou ao visitar o restaurante. Os cupons podem ser de desconto percentual, valor fixo ou prato grátis.
+        - Para usar, informe o garçom ou mostre o cupom digital ao fazer o pedido. O desconto é aplicado ao total da conta ou item específico.
+    
+        Condições:
+        - Não cumulativo com outras promoções.
+        - Sujeito a restrições.
+      `,
+    },
+    {
+      name: 'Tordesilhas - 8% OFF',
+      image: require('../../../assets/tordesilhas.jpg'),
+      description: `
+        O Tordesilhas é um sofisticado restaurante em São Paulo, conhecido por sua cozinha brasileira contemporânea e ambiente elegante.
+    
+        Como Funciona o Cupom:
+        - Obtenha cupons ao participar de promoções ou eventos especiais do restaurante. Os cupons podem oferecer desconto percentual, valor fixo ou pratos gratuitos.
+        - Para usar, apresente o cupom ao garçom ou mostre o cupom digital na hora do pagamento. O desconto é aplicado no total da conta ou em itens selecionados.
+    
+        Condições:
+        - Não acumulável com outras ofertas.
+        - Pode ter restrições específicas.
+      `,
+    },
+
+    {
+      name: 'Clube JazzB - 3% OFF',
+      image: require('../../../assets/jazzb.jpg'),
+      description: `
+        O Clube JazzB é um renomado clube de jazz em São Paulo, conhecido por seu ambiente intimista e performances ao vivo de alta qualidade.
+    
+        Como Funciona o Cupom:
+        - Cupons podem ser adquiridos através de promoções ou eventos especiais. Eles oferecem descontos em ingressos, bebidas ou consumação mínima.
+        - Para utilizar, apresente o cupom ao entrar no clube ou no momento da compra no bar. O desconto será aplicado conforme os termos do cupom.
+    
+        Condições:
+        - Não válido para eventos especiais ou datas específicas.
+        - Não pode ser combinado com outras promoções.
+      `,
+    },
+
+    {
+      name: 'Zoológico de São Paulo - 6% OFF',
+      image: require('../../../assets/zoologico-sp.jpg'),
+      description: `
+        O Zoológico de São Paulo é um dos maiores e mais completos zoológicos do Brasil, oferecendo uma vasta coleção de animais de diferentes espécies em um ambiente naturalizado.
+    
+        Como Funciona o Cupom:
+        - Cupons podem ser usados para obter descontos na entrada do zoológico, em passeios guiados ou em experiências especiais como encontros com animais.
+        - Para utilizar, apresente o cupom na bilheteira do zoológico ou no local específico da atividade. O desconto será aplicado conforme os termos do cupom.
+    
+        Condições:
+        - O cupom não é válido para itens de alimentação ou loja de presentes.
+        - Pode ter restrições em datas específicas.
+      `,
+    }
+
+
+  ];
+
+
 
   return (
     <ScrollView contentContainerStyle={styles.scrollContainer}>
@@ -83,7 +202,7 @@ const HomeScreen = ({ navigation }) => {
         <Pressable
           style={({ pressed }) => [
             styles.logoutButton,
-            { backgroundColor: pressed ? '#d9534f' : '#eca406' }
+            { backgroundColor: pressed ? '#646464FF' : '#242424FF' }
           ]}
           onPress={logout}
         >
@@ -93,7 +212,7 @@ const HomeScreen = ({ navigation }) => {
 
       <View style={styles.containerButtons}>
         <ImageBackground
-          source={require('../../../assets/av-paulista.jpg')}
+          source={require('../../../assets/banner.jpg')}
           style={styles.divText}
           imageStyle={{ borderRadius: 15 }}
         >
@@ -108,7 +227,7 @@ const HomeScreen = ({ navigation }) => {
           <Pressable
             style={({ pressed }) => [
               styles.button,
-              { backgroundColor: pressed ? '#908A8A' : '#E8E8E8' }
+              { backgroundColor: pressed ? '#D49203FF' : '#eca406' }
             ]}
             onPress={() => navigation.navigate('MeusItinerarios', { handleSaveItinerary })}
           >
@@ -118,7 +237,7 @@ const HomeScreen = ({ navigation }) => {
           <Pressable
             style={({ pressed }) => [
               styles.button,
-              { backgroundColor: pressed ? '#908A8A' : '#E8E8E8' }
+              { backgroundColor: pressed ? '#D49203FF' : '#eca406' }
             ]}
             onPress={() => navigation.navigate('Formulario')}
           >
@@ -130,7 +249,7 @@ const HomeScreen = ({ navigation }) => {
       <View style={styles.recommendedSection}>
         <Text style={styles.recommendedTitle}>Lugares Com Cupons</Text>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-          {recommendedPlaces.map((place, index) => (
+          {couponPlaces.map((place, index) => (
             <Pressable
               key={index}
               style={styles.recommendedItem}
