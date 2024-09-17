@@ -4,15 +4,28 @@ const styles = StyleSheet.create({
   container: {
     padding: 20,
     alignItems: 'center',
+    backgroundColor: '#f5f5f5', // Fundo claro
   },
   arrow: {
-    marginRight: 90
+    marginRight: 90,
+    padding: 5, // Adiciona um pouco de espaço ao redor do ícone
+    backgroundColor: '#fff', // Fundo branco para o ícone
+    borderRadius: 50, // Ícone redondo
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 10,
     textAlign: 'center',
+    color: '#333',
+    borderBottomWidth: 2,
+    borderBottomColor: '#eca406', // Cor laranja para a borda inferior
+    paddingBottom: 8,
   },
   header: {
     flexDirection: 'row',
@@ -24,9 +37,10 @@ const styles = StyleSheet.create({
   description: {
     marginBottom: 20,
     textAlign: 'center',
+    color: '#666', // Cor do texto da descrição
   },
   submitButton: {
-    backgroundColor: '#007bff', // Exemplo de cor
+    backgroundColor: '#eca406', // Cor laranja para o botão
     padding: 10,
     borderRadius: 5,
     marginTop: 20,
