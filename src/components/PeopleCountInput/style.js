@@ -16,14 +16,14 @@ const styles = StyleSheet.create({
   },
   input: {
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: '#eca406',
     borderRadius: 5,
     padding: 10,
     textAlign: 'center',
     width: '90%',
   },
   button: {
-    backgroundColor: '#ddd',
+    backgroundColor: '#eca406',
     borderRadius: 5,
     padding: 10,
     margin: 5,
