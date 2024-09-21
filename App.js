@@ -7,11 +7,13 @@ import MainNavigator from './MainNavigator';
 
 const App = () => {
   return (
-    <ItineraryProvider> 
-      <NavigationContainer>
-        <MainNavigator />
-      </NavigationContainer>
-    </ItineraryProvider>
+    <SafeAreaView style={styles.container} >
+      <ItineraryProvider> 
+        <NavigationContainer>
+          <MainNavigator />
+        </NavigationContainer>
+      </ItineraryProvider>
+    </SafeAreaView>
   );
 };
 

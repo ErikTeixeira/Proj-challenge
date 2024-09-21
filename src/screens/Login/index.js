@@ -1,59 +1,25 @@
-import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from 'firebase/auth';
-import React from 'react';
+import { signInWithEmailAndPassword, getAuth } from 'firebase/auth';
+import React, { useState } from 'react';
 import { ImageBackground, Pressable, Text, View } from 'react-native';
 import { app } from '../../../firebaseConfig';
 import InputText from '../../components/InputText/index';
-
 import styles from "./style";
 
-// erik@gmail.com
-// gem123
-
 const LoginScreen = ({ navigation }) => {
-  const [email, setEmail] = React.useState('');
-  const [pass, setPass] = React.useState('');
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+  const [error, setError] = useState(null);
 
-  const [error, setError] = React.useState('');
+  const auth = getAuth(app);
 
-  const [continua, setContinua] = React.useState(false);
-
-  const createUser = () => {
-    const auth = getAuth(app);
-
-    createUserWithEmailAndPassword(auth, email, pass)
-      .then(userCredentials => {
-        console.log("Sucessooo!!");
-      })
-      .catch((error) => {
-        console.log("Error!!", error)
-      })
-      .finally(() => {
-        console.log("Finall!!")
-      })
-  }
-
-  const loginUser = () => {
-    const auth = getAuth(app);
-
-    signInWithEmailAndPassword(auth, email, pass)
-      .then(userCredentials => {
-        console.log("Sucessooo!!");
-
-        setContinua(true);
-      })
-      .catch((error) => {
-        console.log("Error!!", error)
-      })
-      .finally(() => {
-        console.log("Finall!!")
-      })
-  }
-
-  React.useEffect(() => {
-    if (continua) {
-      navigation.navigate('Home');
+  const handleLogin = async () => {
+    try {
+      await signInWithEmailAndPassword(auth, email, senha);
+      navigation.navigate('Home'); 
+    } catch (error) {
+      setError(error.message);
     }
-  }, [continua, navigation]);
+  };
 
   return (
     <ImageBackground
@@ -64,7 +30,7 @@ const LoginScreen = ({ navigation }) => {
       <View style={styles.container}>
         <Text style={styles.title}>TechPeach</Text>
 
-        <Text style={styles.login}>Login</Text>
+        {error && <Text style={styles.errorText}>{error}</Text>}
 
         <InputText
           style={styles.input}
@@ -73,13 +39,12 @@ const LoginScreen = ({ navigation }) => {
           placeholder='email'
         />
 
-        <Text style={styles.login}>Senha</Text>
-
         <InputText
           style={styles.input}
-          value={pass}
-          onChangeText={setPass}
+          value={senha}
+          onChangeText={setSenha}
           placeholder='senha'
+          secureTextEntry // Para esconder a senha
         />
 
         <Pressable
@@ -87,17 +52,18 @@ const LoginScreen = ({ navigation }) => {
             styles.button,
             { backgroundColor: pressed ? '#D49203FF' : '#FFBE31FF' }
           ]}
-          onPress={loginUser}
+          onPress={handleLogin}
         >
           <Text style={styles.text}>Login</Text>
         </Pressable>
 
+        {/* Adicione um botão para navegar ao cadastro */}
         <Pressable
           style={({ pressed }) => [
             styles.button,
             { backgroundColor: pressed ? '#D49203FF' : '#FFBE31FF' }
           ]}
-          onPress={createUser}
+          onPress={() => navigation.navigate('Register')} // Navega para a tela de Cadastro
         >
           <Text style={styles.text}>Cadastrar</Text>
         </Pressable>

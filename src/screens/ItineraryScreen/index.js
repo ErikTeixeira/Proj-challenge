@@ -1,8 +1,10 @@
 import * as GoogleGenerativeAI from '@google/generative-ai';
 import React, { useEffect, useState } from 'react';
 import { ActivityIndicator, Pressable, ScrollView, Text, View } from 'react-native';
+import { getAuth } from 'firebase/auth';
+import { app } from '../../../firebaseConfig';
 
-import { useItineraries } from '../../components/ItineraryContext';
+import { useItineraries  } from '../../components/ItineraryContext';
 
 import styles from "./style";
 
@@ -18,6 +20,7 @@ const ItineraryScreen = ({ route, navigation }) => {
   const { formData } = route.params;
   const [itinerary, setItinerary] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const auth = getAuth(app);
 
   const { addItinerary } = useItineraries();
 
@@ -112,6 +115,27 @@ const ItineraryScreen = ({ route, navigation }) => {
     fetchItinerary();
   }, [formData]);
 
+
+  const handleSaveItinerary = async () => {
+    try {
+      const user = auth.currentUser;
+
+      if (!user) {
+        alert('Erro', 'Usuário não autenticado. Faça login para salvar o itinerário.');
+        return;
+      }
+
+      // Use addItinerary do contexto:
+      addItinerary(itinerary); 
+
+      alert('Sucesso', 'Itinerário salvo com sucesso!');
+      navigation.navigate('Home'); 
+    } catch (error) {
+      console.error('Erro ao salvar o itinerário:', error);
+      alert('Erro', 'Ocorreu um erro ao salvar o itinerário. Tente novamente.');
+    }
+  };
+
   // useEffect para salvar o itinerário no MyItinerary (movido para fora)
   useEffect(() => {
     if (route.params?.newItinerary) {
@@ -200,10 +224,7 @@ const ItineraryScreen = ({ route, navigation }) => {
 
             <Pressable
               style={styles.button}
-              onPress={() => {
-                addItinerary(itinerary);
-                navigation.navigate('Home');
-              }}
+              onPress={handleSaveItinerary} 
             >
               <Text style={styles.buttonText}>Salvar Itinerário</Text>
             </Pressable>

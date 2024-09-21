@@ -22,6 +22,11 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 3,
   },
+  tinyLogo: {
+    height: 30,
+    width: 30,
+    marginRight: 15,
+  },
   title: {
     fontSize: 26, // Título maior para dar mais presença
     fontWeight: 'bold',

@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import styles from './style'; // Crie também o arquivo style.js para este componente
 
-const SingleOptionSelector = ({ title, options, selectedOption, setSelectedOption }) => {
+const SingleOptionSelector = ({ title, options, selectedOption, setSelectedOption, isRequired = true }) => {
   const toggleOption = (option) => {
     if (selectedOption === option) {
       setSelectedOption(null); // Desmarca se já estiver selecionado
@@ -13,7 +13,7 @@ const SingleOptionSelector = ({ title, options, selectedOption, setSelectedOptio
 
   return (
     <View style={styles.inputContainer}>
-      <Text style={styles.login}>{title}</Text>
+      <Text style={styles.login}>{title} {isRequired && <Text style={styles.required}>*</Text>}</Text>
 
       <View style={styles.option}>
         {options.map((option) => (

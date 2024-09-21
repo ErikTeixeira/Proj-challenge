@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Pressable, ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { Pressable, ScrollView, Text, TouchableOpacity, View, Image } from 'react-native';
 
-import { Ionicons } from '@expo/vector-icons'; // Importe o ícone de voltar
 
 import { useNavigation } from '@react-navigation/native';
 
@@ -116,9 +115,10 @@ const AddItinerario = () => {
 
 
   const handleSubmit = () => {
-    if (budget.trim() === '') {
-      alert('O orçamento é obrigatório.');
-      return;
+    if (address.trim() === '' || days.trim() === '' || selectedOptions.length === 0 || travelCompanion.trim() === '') {
+      // Use a função alert do JavaScript
+      alert('Campos Obrigatórios. Por favor, preencha todos os campos obrigatórios: Endereço, Dias, Foco do Roteiro e Acompanhante.');
+      return; 
     }
 
     let responseText = `Você ficará ${days} dias em São Paulo.\n`;
@@ -167,7 +167,10 @@ const AddItinerario = () => {
           onPress={() => navigation.navigate('Home')}
           style={styles.arrow}
         >
-          <Ionicons name="arrow-back" size={24} color="black" />
+          <Image
+            style={styles.tinyLogo}
+            source={require('../../../assets/left-arrow.png')}
+          />
         </TouchableOpacity>
 
         <Text style={styles.title}>TechPeach</Text>

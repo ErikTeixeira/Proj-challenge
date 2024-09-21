@@ -3,7 +3,7 @@ import { View, Text, TextInput, Pressable } from 'react-native';
 
 import styles from './style';
 
-const DaysInput = ({ days, setDays }) => {
+const DaysInput = ({ days, setDays, isRequired = true }) => {
   const handleDaysChange = (input) => {
     const cleanedInput = input.replace(/[^\d]/g, '');
     const number = parseInt(cleanedInput, 10);
@@ -30,7 +30,7 @@ const DaysInput = ({ days, setDays }) => {
 
   return (
     <View style={styles.inputContainer}>
-      <Text style={styles.login}>Quantos dias você ficará em São Paulo?</Text>
+      <Text style={styles.login}>Quantos dias você ficará em São Paulo? {isRequired && <Text style={styles.required}>*</Text>}</Text> 
 
       <View style={styles.inputNumber}>
         <Pressable style={styles.button} onPress={decrementDays}>

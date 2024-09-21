@@ -5,13 +5,13 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyC1QvFaH09iTSVeI8SQDuPe8pzLxVM9FKc",
-  authDomain: "aula-mobile-fiap-2024-4e888.firebaseapp.com",
-  projectId: "aula-mobile-fiap-2024-4e888",
-  storageBucket: "aula-mobile-fiap-2024-4e888.appspot.com",
-  messagingSenderId: "447021829996",
-  appId: "1:447021829996:web:418928907bd995d7d9ad49"
+  apiKey: "AIzaSyCqIFWPOkhtfRa2GUSLWwwbcMeho9IPFkQ",
+  authDomain: "techpeach-challenge.firebaseapp.com",
+  projectId: "techpeach-challenge",
+  storageBucket: "techpeach-challenge.appspot.com",
+  messagingSenderId: "843564684918",
+  appId: "1:843564684918:web:5482304ee6934cfe473157"
 };
 
 // Initialize Firebase
-export const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);

@@ -14,6 +14,10 @@ const styles = StyleSheet.create({
   arrow: {
     marginRight: 16,
   },
+  tinyLogo: {
+    height: 30,
+    width: 30,
+  },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
@@ -55,10 +59,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginLeft: 16,
-  },
-  deleteButtonText: {
-    color: '#fff', // Texto branco para o botão de excluir
-    fontSize: 16,
   },
   formContainer: {
     backgroundColor: '#fff',

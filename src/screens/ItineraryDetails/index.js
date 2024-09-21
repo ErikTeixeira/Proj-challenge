@@ -1,7 +1,5 @@
 import React from 'react';
-import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
-
-import { Ionicons } from '@expo/vector-icons'; // Importe o ícone de voltar
+import { ScrollView, Text, TouchableOpacity, View, Image } from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
 
@@ -85,7 +83,10 @@ const DetalhesItinerario = ({ route }) => {
       <ScrollView style={styles.container}>
         <View style={styles.header}>
           <TouchableOpacity onPress={() => navigation.navigate('Home')}>
-            <Ionicons name="arrow-back" size={24} color="black" style={styles.arrow} />
+            <Image
+              style={styles.tinyLogo}
+              source={require('../../../assets/left-arrow.png')}
+            />
           </TouchableOpacity>
           <Text style={styles.title}>Detalhes do Itinerário</Text>
         </View>

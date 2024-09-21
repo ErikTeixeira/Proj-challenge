@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import styles from './style';
 
-const OptionSelector = ({ title, options, selectedOptions, setSelectedOptions, maxSelections }) => {
+const OptionSelector = ({ title, options, selectedOptions, setSelectedOptions, maxSelections, isRequired = true }) => { 
   const toggleOption = (option) => {
     if (selectedOptions.includes(option)) {
       // Se a opção já estiver selecionada, remove
@@ -19,7 +19,7 @@ const OptionSelector = ({ title, options, selectedOptions, setSelectedOptions, m
 
   return (
     <View style={styles.inputContainer}>
-      <Text style={styles.login}>{title}</Text>
+      <Text style={styles.login}>{title} {isRequired && <Text style={styles.required}>*</Text>}</Text> 
 
       <View style={styles.option}>
         {options.map((option) => (

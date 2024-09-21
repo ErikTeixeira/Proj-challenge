@@ -17,6 +17,10 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 3,
   },
+  tinyLogo: {
+    height: 30,
+    width: 30,
+  },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
@@ -105,8 +109,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   focusOptionText: {
-    color: '#eca406', // Texto laranja para opções de foco
+    color: '#eca406',
     fontSize: 16,
+  },
+  required: {
+    color: 'red', 
   },
   footer: {
     padding: 15,

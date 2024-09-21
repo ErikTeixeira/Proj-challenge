@@ -1,6 +1,7 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Login from './src/screens/Login';
+import Register from './src/screens/register';
 import Home from './src/screens/Home';
 import PlaceDetails from './src/screens/PlaceDetails';
 import AddItinerario from './src/screens/AddItinerario';
@@ -13,6 +14,7 @@ const MainNavigator = () => {
     return (
         <Stack.Navigator initialRouteName="Login">
             <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
+            <Stack.Screen name="Register" component={Register} options={{ headerShown: false }} />
             <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
             <Stack.Screen name="Detalhes" component={PlaceDetails} options={{ headerShown: false }} />
             <Stack.Screen name="Formulario" component={AddItinerario} options={{ headerShown: false }} />
