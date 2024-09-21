@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: '#fff',
     textAlign: 'center',
-    paddingBottom: '20%',
+    paddingBottom: '21%',
     textShadowColor: 'rgba(0, 0, 0, 0.95)',
     textShadowOffset: { width: 3, height: 3 },
     textShadowRadius: 4,
@@ -45,6 +45,24 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '800',
     color: '#000',
+  },
+  datePickerContainer: {
+    marginBottom: 10,
+  },
+  datePickerLabel: {
+    fontSize: 16,
+    marginBottom: 5,
+    color: '#fff',
+    fontWeight: 700
+  },
+  datePicker: {
+    width: '100%',
+    height: '40px', 
+    border: '1px solid #eca406', 
+    borderRadius: '6px', 
+    padding: '10px',
+    color: '#000', 
+    backgroundColor: '#fff',  
   },
 });
 

@@ -3,32 +3,61 @@ import { View, Text, Pressable, ImageBackground, ScrollView, Alert } from 'react
 import { getAuth, createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { getFirestore, doc, setDoc } from 'firebase/firestore';
 import { app } from '../../../firebaseConfig';
-
-import InputText from '../../components/InputText/index'; 
-
-import styles from './style'; 
+import DatePicker from 'react-datepicker'; // Importe o DatePicker
+import 'react-datepicker/dist/react-datepicker.css'; // Importe os estilos
+import InputText from '../../components/InputText/index';
+import styles from './style';
 
 const Register = ({ navigation }) => {
   const [nome, setNome] = useState('');
-  const [idade, setIdade] = useState('');
+
+  const [dataNascimento, setDataNascimento] = useState(new Date()); // Use Date para data de nascimento
+
   const [endereco, setEndereco] = useState('');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [error, setError] = useState(null);
+  const [showDatePicker, setShowDatePicker] = useState(false);
 
   const auth = getAuth(app);
   const db = getFirestore(app);
 
-  const handleIdadeChange = (text) => {
-    const numericText = text.replace(/[^0-9]/g, ''); // Permite apenas números
-    setIdade(numericText);
+  const handleDateChange = (event, selectedDate) => {
+    const currentDate = selectedDate || dataNascimento;
+    setShowDatePicker(false);
+    setDataNascimento(currentDate);
+  };
+
+  const showDatepicker = () => {
+    setShowDatePicker(true);
+  };
+
+  const calculateAge = (date) => {
+    const today = new Date();
+    const birthDate = new Date(date);
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+    return age;
   };
 
   const handleCadastro = async () => {
-    const idadeNum = parseInt(idade, 10);
+    const age = calculateAge(dataNascimento);
 
-    if (idadeNum < 10) {
-      Alert.alert('Erro', 'Você precisa ter pelo menos 10 anos para se cadastrar.');
+    if (age < 12) {
+      alert('Você precisa ter uma idade válida.');
+      return;
+    }
+
+    if (!email.includes('@')) { 
+      alert('Por favor, insira um endereço de email válido.');
+      return;
+    }
+
+    if (senha.length < 6) { 
+      alert('A senha deve ter pelo menos 6 caracteres.');
       return;
     }
 
@@ -40,9 +69,13 @@ const Register = ({ navigation }) => {
         displayName: nome,
       });
 
+      const mesAnoNascimento = `${dataNascimento.toLocaleString('default', { month: 'long' })} ${dataNascimento.getFullYear()}`;
+
+      alert('Sucesso na criação de login!');
+
       await setDoc(doc(db, 'users', user.uid), {
         nome: nome,
-        idade: idade,
+        dataNascimento: mesAnoNascimento, // Salva apenas mês e ano
         endereco: endereco,
         email: email,
       });
@@ -60,7 +93,7 @@ const Register = ({ navigation }) => {
       style={styles.image}
       blurRadius={1}
     >
-      <ScrollView 
+      <ScrollView
         contentContainerStyle={styles.scrollContainer}
         showsVerticalScrollIndicator={false}
       >
@@ -69,37 +102,42 @@ const Register = ({ navigation }) => {
 
           {error && <Text style={styles.errorText}>{error}</Text>}
 
-          <InputText 
+          <InputText
             style={styles.input}
             placeholder="Nome"
             value={nome}
             onChangeText={setNome}
           />
 
-          <InputText 
-            style={styles.input}
-            placeholder="Idade"
-            value={idade}
-            onChangeText={handleIdadeChange} 
-            keyboardType="numeric" 
-          />
+          <View style={styles.datePickerContainer}> 
+            <Text style={styles.datePickerLabel}>Data de Nascimento:</Text>
+            
+            <DatePicker
+              selected={dataNascimento}
+              onChange={(date) => setDataNascimento(date)}
+              dateFormat="MMMM yyyy" 
+              showMonthYearPicker 
+              locale="pt-BR"
+              style={styles.datePicker}
+            />
+          </View>
 
-          <InputText 
+          <InputText
             style={styles.input}
             placeholder="Endereço"
             value={endereco}
             onChangeText={setEndereco}
           />
 
-          <InputText 
+          <InputText
             style={styles.input}
             placeholder="Email"
             value={email}
             onChangeText={setEmail}
-            keyboardType="email-address" 
+            keyboardType="email-address"
           />
 
-          <InputText 
+          <InputText
             style={styles.input}
             placeholder="Senha"
             value={senha}

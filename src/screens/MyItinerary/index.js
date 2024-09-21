@@ -47,7 +47,6 @@ const MyItinerary = ({ navigation }) => {
       // Chame a função deleteItinerary do contexto:
       await deleteItinerary(itineraryId); 
       
-      // Exiba um alerta de sucesso:
       alert('Sucesso', 'Itinerário excluído com sucesso!'); 
     } catch (error) {
       console.error('Erro ao excluir o itinerário:', error);
