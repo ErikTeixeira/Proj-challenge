@@ -261,6 +261,7 @@ const AddItinerario = () => {
       <Pressable style={styles.submitButton} onPress={handleSubmit}>
         <Text style={styles.submitButtonText}>Enviar</Text>
       </Pressable>
+      
       <View style={styles.footer}>
         <Text style={styles.footerText}>
           &#169; TechPeach Copyright 2024

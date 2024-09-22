@@ -116,7 +116,9 @@ const styles = StyleSheet.create({
     color: 'red', 
   },
   footer: {
-    padding: 15,
+    paddingTop: 15,
+    paddingLeft: 15,
+    paddingRight: 15,
     alignItems: 'center',
   },
   footerText: {

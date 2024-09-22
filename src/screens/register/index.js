@@ -98,7 +98,11 @@ const Register = ({ navigation }) => {
         showsVerticalScrollIndicator={false}
       >
         <View style={styles.container}>
-          <Text style={styles.title}>TechPeach - Cadastro</Text>
+
+          <View style={styles.titleContainer}>
+            <Text style={styles.title}>TechPeach</Text>
+            <Text style={styles.title}>Cadastro</Text>
+          </View>
 
           {error && <Text style={styles.errorText}>{error}</Text>}
 

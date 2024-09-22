@@ -209,8 +209,16 @@ const ItineraryScreen = ({ route, navigation }) => {
     <View style={{ flex: 1 }}>
       {isLoading ? (
         <View style={styles.loadingContainer}>
-          <ActivityIndicator size="large" color="#eca406" />
-          <Text>Gerando seu itinerário...</Text>
+          <View style={styles.loading} >
+            <ActivityIndicator size="large" color="#eca406" />
+            <Text>Gerando seu itinerário...</Text>
+          </View>
+
+          <View style={styles.footerLoading}>
+            <Text style={styles.footerText}>
+              &#169; TechPeach Copyright 2024
+            </Text>
+          </View>
         </View>
       ) : (
         <ScrollView style={styles.scrollView}>
@@ -229,14 +237,17 @@ const ItineraryScreen = ({ route, navigation }) => {
               <Text style={styles.buttonText}>Salvar Itinerário</Text>
             </Pressable>
           </View>
+
+          <View style={styles.footer}>
+            <Text style={styles.footerText}>
+              &#169; TechPeach Copyright 2024
+            </Text>
+          </View>
+
         </ScrollView>
       )}
 
-      <View style={styles.footer}>
-        <Text style={styles.footerText}>
-          &#169; TechPeach Copyright 2024
-        </Text>
-      </View>
+      
     </View>
   );
 };

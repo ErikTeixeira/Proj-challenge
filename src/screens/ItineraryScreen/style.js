@@ -1,16 +1,29 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-  container: {
+  loadingContainer: {
     flex: 1,
-    padding: 20,
-    backgroundColor: '#f0f4f8', // Fundo com leve tom azulado para modernidade
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  loading: {
+    paddingTop: '65%'
+  },
+  footerLoading: {
+    paddingTop: '70%',
+    paddingLeft: 15,
+    paddingRight: 15,
+    alignItems: 'center',
+  },
+  scrollView: {
+    flex: 1,
+    padding: 20, 
   },
   title: {
     fontSize: 28,
-    fontWeight: '700', // Título em negrito para destaque
+    fontWeight: '700',
     marginBottom: 20,
-    color: '#1a1a1a', // Preto suave
+    color: '#1a1a1a', 
     textAlign: 'left',
   },
   periodTitle: {
@@ -69,11 +82,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#333',
   },
-  loadingContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
   buttonContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -101,11 +109,10 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     fontSize: 16,
   },
-  scrollView: {
-    flex: 1,
-  },
   footer: {
-    padding: 15,
+    paddingTop: 22,
+    paddingLeft: 15,
+    paddingRight: 15,
     alignItems: 'center',
   },
   footerText: {
