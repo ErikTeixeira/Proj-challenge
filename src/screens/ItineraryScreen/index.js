@@ -80,7 +80,7 @@ const ItineraryScreen = ({ route, navigation }) => {
         // Send the user's itinerary preferences as the next input
         const userMessage = `
           Crie um itinerário de viagem detalhado para cidade de São Paulo com base nas seguintes informações que o usuário informou:
-          - Endereço do Hotel: ${formData.address} 
+          - Endereço que estou em São Paulo: ${formData.address} 
           - Duração da viagem: ${formData.days} dias
           - Preferências: ${formData.selectedOptions.join(', ')}
           - Acompanhantes: ${formData.travelCompanion}
@@ -94,6 +94,8 @@ const ItineraryScreen = ({ route, navigation }) => {
 
           Inclua sugestões de:
           - Horários para cada atividade
+          - De informações para o usuário que ele gostaria de saber de cada local e do porque ele gostaria de ir lá
+          - Em cada recomendação de lugar adicione uma avaliação positiva tendo a data com ano de publicação e quem escreveu dos arquivos que você analisou sendo do google reviews e trip advisor (não mostre usuário anônimo e sem data) , para mostrar que as recomendações não são inventadas
           - Meios de transporte
           - Custo estimado de cada atividade (se possível)
           - Links para mais informações sobre cada local
